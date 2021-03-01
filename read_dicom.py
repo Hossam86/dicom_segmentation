@@ -1,16 +1,11 @@
 from testfile import file_name, folder_path, file_path
 import pydicom
 import matplotlib.pyplot as plt
+import numpy as np
 import os
 
-import numpy as np
-
-import sys
-import glob
 
 # load dicom
-
-
 def load_dicom(folder_path):
     files = [pydicom.dcmread(folder_path+'/'+s)
              for s in os.listdir(folder_path)]
